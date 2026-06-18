@@ -1,0 +1,19 @@
+{
+  "name": "store-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@colyseus/monitor": "^0.17.8",
+    "@colyseus/schema": "^2.0.37",
+    "colyseus": "^0.15.16",
+    "express": "^5.2.1"
+  }
+}
