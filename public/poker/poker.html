@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Poker Table</title>
+    <link rel="stylesheet" href="poker.css">
+</head>
+<body>
+
+<div id="nicknameScreen" class="screen">
+    <div class="panel">
+        <h1>Poker</h1>
+        <input id="nicknameInput" placeholder="Enter nickname" maxlength="16">
+        <button onclick="saveNickname()">Continue</button>
+    </div>
+</div>
+
+<div id="menuScreen" class="screen hidden">
+    <div class="panel">
+        <h1>Hello, <span id="nicknameLabel"></span></h1>
+        <button onclick="startBotGame()">Play vs Bots</button>
+        <button onclick="showOnlineLobby()">Online</button>
+    </div>
+</div>
+
+<div id="lobbyScreen" class="screen hidden">
+    <div class="panel">
+        <h1>Online Lobby</h1>
+        <div id="lobbyPlayers">Waiting for players...</div>
+        <button id="readyButton" onclick="toggleReady()">Ready</button>
+        <button onclick="backToMenu()">Back</button>
+    </div>
+</div>
+
+<div id="gameScreen" class="table hidden">
+    <div id="status">New round</div>
+    <div id="opponents" class="opponents"></div>
+
+    <div class="pot">
+        Pot: <span id="potAmount">0</span>
+    </div>
+
+    <div id="board" class="board">
+        <div id="card1"></div>
+        <div id="card2"></div>
+        <div id="card3"></div>
+        <div id="card4"></div>
+        <div id="card5"></div>
+    </div>
+
+    <div class="player-area">
+        <div class="player-info">
+            <span id="playerName">YOU</span> — <span id="playerChips">1000</span> chips
+        </div>
+
+        <div id="playerCards" class="player-cards">
+            <div id="playerCard1"></div>
+            <div id="playerCard2"></div>
+        </div>
+
+        <div class="raise-control">
+            <label>Bet: <span id="raiseAmountLabel">50</span></label>
+            <input id="raiseSlider" type="range" min="50" max="1000" step="50" value="50">
+        </div>
+
+        <div class="actions">
+            <button onclick="playerAction('fold')">Fold</button>
+            <button onclick="playerAction('check')">Check</button>
+            <button id="betButton" onclick="playerAction('bet')">Bet</button>
+        </div>
+    </div>
+</div>
+
+<script src="poker.js"></script>
+</body>
+</html>
