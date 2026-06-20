@@ -18,9 +18,21 @@ function showScreen(id) {
 
 function saveNickname() {
     userNickname = $("nicknameInput").value.trim() || "Player";
+
     players[0].name = userNickname;
+
     $("nicknameLabel").innerText = userNickname;
     $("playerName").innerText = userNickname;
+
+    const nickScreen = $("nicknameScreen");
+
+    if (nickScreen) {
+        nickScreen.classList.add("hidden");
+        nickScreen.style.display = "none";
+        nickScreen.style.visibility = "hidden";
+        nickScreen.style.pointerEvents = "none";
+    }
+
     showScreen("menuScreen");
 }
 
