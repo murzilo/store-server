@@ -10,10 +10,27 @@ function $(id) {
 }
 
 function showScreen(id) {
-    ["nicknameScreen", "menuScreen", "lobbyScreen", "gameScreen"].forEach(screenId => {
-        $(screenId).classList.add("hidden");
+    const screens = ["nicknameScreen", "menuScreen", "lobbyScreen", "gameScreen"];
+
+    screens.forEach(screenId => {
+        const el = $(screenId);
+        if (!el) return;
+
+        el.classList.add("hidden");
+        el.style.setProperty("display", "none", "important");
+        el.style.setProperty("visibility", "hidden", "important");
+        el.style.setProperty("opacity", "0", "important");
+        el.style.setProperty("pointer-events", "none", "important");
     });
-    $(id).classList.remove("hidden");
+
+    const target = $(id);
+    if (!target) return;
+
+    target.classList.remove("hidden");
+    target.style.setProperty("display", id === "gameScreen" ? "block" : "flex", "important");
+    target.style.setProperty("visibility", "visible", "important");
+    target.style.setProperty("opacity", "1", "important");
+    target.style.setProperty("pointer-events", "auto", "important");
 }
 
 function saveNickname() {
