@@ -308,7 +308,7 @@ button {
     .pot {
         font-size: 25px;
         line-height: 1;
-        margin: -5px 0 0;
+        margin: -9px 0 0;
         align-self: end;
     }
 
@@ -331,7 +331,7 @@ button {
     .player-info {
         font-size: 18px;
         line-height: 1;
-        margin: -3px 0 0;
+        margin: -9px 0 0;
         align-self: end;
     }
 
@@ -348,7 +348,7 @@ button {
 
     .raise-control {
         font-size: 13px;
-        margin: -5px 0 0;
+        margin: -9px 0 0;
         align-self: center;
     }
 
