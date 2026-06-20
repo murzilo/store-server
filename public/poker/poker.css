@@ -272,7 +272,7 @@ button {
     }
 
     #status {
-        font-size: 17px;
+        font-size: 13px;
         line-height: 1.1;
         margin: 0;
     }
@@ -308,7 +308,7 @@ button {
     .pot {
         font-size: 25px;
         line-height: 1;
-        margin: 0;
+        margin: -5px 0 0;
         align-self: end;
     }
 
@@ -331,7 +331,7 @@ button {
     .player-info {
         font-size: 18px;
         line-height: 1;
-        margin: 0;
+        margin: -3px 0 0;
         align-self: end;
     }
 
@@ -348,7 +348,7 @@ button {
 
     .raise-control {
         font-size: 13px;
-        margin: 0;
+        margin: -5px 0 0;
         align-self: center;
     }
 
@@ -367,7 +367,7 @@ button {
     button {
         min-width: 82px;
         height: 34px;
-        margin: 0;
+        margin: -2px 0 0;
         font-size: 12px;
     }
 }
