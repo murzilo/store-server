@@ -14,7 +14,7 @@ body {
     padding: 8px;
     color: #dddddd;
     font-family: Verdana, sans-serif;
-    background: radial-gradient(circle, #236b3a, #0b2f1b);
+    background: transparent; /* было: radial-gradient(...) */
 }
 
 .hidden {
