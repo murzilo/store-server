@@ -12,17 +12,15 @@
 </head>
 <body>
 
-<div id="nicknameScreen" class="screen">
+<div id="menuScreen" class="screen">
     <div class="panel">
-        <h1>Poker</h1>
-        <input id="nicknameInput" placeholder="Enter nickname" maxlength="16">
-        <button onclick="saveNickname()">Continue</button>
-    </div>
-</div>
-
-<div id="menuScreen" class="screen hidden">
-    <div class="panel">
-        <h1>Hello, <span id="nicknameLabel"></span></h1>
+        <h1>Hello, <span
+            id="nicknameLabel"
+            contenteditable="true"
+            spellcheck="false"
+            title="Click to edit"
+        >Guest</span></h1>
+        <p class="nickname-hint">← click to change</p>
         <button onclick="startBotGame()">Play vs Bots</button>
         <button onclick="showOnlineLobby()">Online</button>
     </div>
@@ -65,7 +63,7 @@
 
         <div class="raise-control">
             <label>Bet: <span id="raiseAmountLabel">50</span></label>
-            <input id="raiseSlider" type="range" min="50" max="1000" step="50" value="50">
+            <input id="raiseSlider" type="range" min="0" max="1000" step="50" value="0">
         </div>
 
         <div class="actions">
