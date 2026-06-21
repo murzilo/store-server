@@ -342,7 +342,7 @@ button {
 
     .raise-control {
         font-size: 13px;
-        margin: 9px 0 0;
+        margin: -5px 0 0;
         align-self: center;
     }
 
